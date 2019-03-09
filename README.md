@@ -34,7 +34,7 @@ docker images
 |eth-stats|latest|b49b42609e90|2 hours ago|699MB|
 |eth-pri|1.0|e56970c701bb|2 hours ago|451MB|
 
-2) docker-compose를 실행하여 컨테이너를 생성하고 Private network를 구성합니다(docker-compose.yml이 있는 디렉토리에서 실행). 네트워크를 종료할 때는 docker-compose stop을 실행하면 됩니다.
+2) docker-compose를 실행하여 컨테이너를 생성하고 Private network를 구성합니다(docker-compose.yml이 있는 디렉토리에서 실행). 종료할 때는 docker-compose stop을 실행하면 됩니다.
 
 ```
 docker-compose up
