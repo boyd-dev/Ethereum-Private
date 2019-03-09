@@ -1,6 +1,6 @@
 # Ethereum Private Network with Docker
 
-geth 1.8.23(Xircus)를 도커 컨테이너로 만들어서 이더리움 로컬 Private Blockchain을 구성하고 Ethstats을 사용하여 노드 모니터링도 함께 적용해보았습니다. Private이므로 PoW가 아닌 PoA(이더리움 Clique)로 특정 노드에서 블록을 생성합니다.  
+geth v1.8.23(Xircus)를 도커 컨테이너로 만들어서 이더리움 로컬 Private Blockchain을 구성하고 Ethstats을 사용하여 노드 모니터링도 함께 적용해보았습니다. Private이므로 PoW가 아닌 PoA(이더리움 Clique)로 특정 노드에서 블록을 생성합니다.  
 
 
 **Dockerfile**
