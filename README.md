@@ -1,6 +1,6 @@
 # Ethereum Private Network with Docker
 
-Geth v1.8.23(Xircus)를 도커 컨테이너로 만들어서 이더리움 로컬 Private Blockchain을 구성하고 Ethstats을 사용하여 노드 모니터링도 함께 적용합니다. Private에 적합하도록 PoW가 아닌 PoA(이더리움 Clique)로 특정 노드(sealer)에서 블록을 생성합니다.  
+Geth v1.8.23(Xircus)를 도커 컨테이너로 만들어서 이더리움 로컬 Private Blockchain을 구성하고 Ethstats을 사용하여 노드 모니터링도 함께 적용합니다. Private에 적합하도록 PoW가 아닌 <b>PoA(Clique)</b>로 특정 노드(sealer)에서 블록을 생성합니다.  
 
 
 ### Dockerfile
