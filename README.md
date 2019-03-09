@@ -48,4 +48,4 @@ docker-compose up
 
 3) localhost:3000에 접속하여 노드가 모두 sync되는지 확인하십시오.
 
-<img src="https://github.com/boyd-dev/Ethereum-Private/blob/master/stats.PNG" width="640"/>
+<img src="https://github.com/boyd-dev/Ethereum-Private/blob/master/stats.PNG" width="720"/>
