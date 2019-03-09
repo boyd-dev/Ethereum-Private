@@ -8,7 +8,7 @@ Geth v1.8.23(Xircus)를 도커 컨테이너로 만들어서 이더리움 로컬 
 Dockerfile은 각각 ubuntu-xenial 이미지로부터 만들어졌습니다.
 
 * eth-node  
-geth 1.8.23 이미지입니다. genesis.json, 블록 생성계정(sealer), 블록 sign을 위해 패스워드 파일 등이 이미지 생성에 필요합니다. puppeth과 geth를 통해 미리 준비합니다.
+Geth 1.8.23 이미지입니다. genesis.json, 블록 생성계정(sealer), 블록 sign을 위해 패스워드 파일 등이 이미지 생성에 필요합니다. puppeth과 geth를 통해 미리 준비합니다.
 
 * eth-netstats  
 Node.js로 구현된 서버입니다. 노드 모니터링 화면을 제공하는 이미지입니다. <a href="https://medium.com/@javahippie/building-a-local-ethereum-network-with-docker-and-geth-5b9326b85f37">다음 글</a>을 참고하시기 바랍니다.
