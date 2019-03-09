@@ -22,7 +22,13 @@ docker-compose를 통해 부트노드, Sealer노드(1개), 일반노드(2개), �
 
 **사용법**
 
-1) 각 디렉토리에 있는 Dockerfile을 사용하여 이미지를 생성하십시오. docker-compose.yml에서 생성된 이미지 이름을 사용합니다. 예를 들어 생성된 이미지는 docker images 명령어로 다음과 같이 조회합니다.
+1) 각 디렉토리에 있는 Dockerfile을 사용하여 이미지를 생성하십시오. 
+
+```
+docker build -t eth-pri:1.1 .
+```
+
+docker-compose.yml에서 생성된 이미지 이름을 사용합니다. 예를 들어 생성된 이미지는 docker images 명령어로 다음과 같이 확인할 수 있습니다.
 
 ```
 docker images
