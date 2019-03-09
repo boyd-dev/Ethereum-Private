@@ -1,0 +1,3 @@
+syntax off
+set nohlsearch
+

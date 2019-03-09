@@ -1,0 +1,73 @@
+version: "3"
+services:
+  bootnode:
+    image: eth-pri:1.0    
+    container_name: eth-boot
+    command: bootnode -verbosity 6 -nodekeyhex "aa4ee3299a38fc203c29fd81bba6f5cbbb302b80ea21e040d378dd79f926c7fd" -addr "172.24.0.3:30301"   
+    ports: 
+      - 30301:30301/udp
+    networks:
+      private: 
+        ipv4_address: 172.24.0.3
+
+  sealer:
+    image: eth-pri:1.0
+    container_name: eth-sealer
+    depends_on: 
+      - bootnode
+    command: geth --networkid 337  --datadir "/root/edu" --rpc --rpcaddr 0.0.0.0 --rpccorsdomain "*" --bootnodes enode://0c053daa5342e35ccb43de391746a318d13ebddb45fdf162faf2e008248af1d39f36c16906ccc725037d2da9814af7bed1ecd998a45d4c7e078bf7178f22f5d4@172.24.0.3:30301 --unlock "0xa7e559e09acd301a75990e6b2942187ee660b2d3" --password "/root/pass" --mine --minerthreads=1
+    ports:
+      - 8546:8545
+    networks:
+      private: 
+        ipv4_address: 172.24.0.4
+
+  normalnode1:
+    image: eth-pri:1.0
+    container_name: eth-node1
+    depends_on: 
+      - bootnode
+    command: geth --networkid 337  --datadir "/root/edu" --rpc --rpcaddr 0.0.0.0 --rpccorsdomain "*" --bootnodes enode://0c053daa5342e35ccb43de391746a318d13ebddb45fdf162faf2e008248af1d39f36c16906ccc725037d2da9814af7bed1ecd998a45d4c7e078bf7178f22f5d4@172.24.0.3:30301
+    ports:
+      - 8547:8545
+    networks:
+      private: 
+        ipv4_address: 172.24.0.5
+
+  normalnode2:
+    image: eth-pri:1.0
+    container_name: eth-node2
+    depends_on: 
+      - bootnode
+    command: geth --networkid 337  --datadir "/root/edu" --rpc --rpcaddr 0.0.0.0 --rpccorsdomain "*" --bootnodes enode://0c053daa5342e35ccb43de391746a318d13ebddb45fdf162faf2e008248af1d39f36c16906ccc725037d2da9814af7bed1ecd998a45d4c7e078bf7178f22f5d4@172.24.0.3:30301
+    ports:
+      - 8548:8545
+    networks:
+      private: 
+        ipv4_address: 172.24.0.6
+
+
+  stats-backend:
+    image: eth-intelli
+    container_name: eth-intelli
+    networks:
+      private:
+        ipv4_address: 172.24.0.20
+
+  stats-frontend:
+    image: eth-stats
+    depends_on: 
+      - stats-backend
+    container_name: eth-stats
+    ports:
+      - 3000:3000
+    networks:
+      private:
+        ipv4_address: 172.24.0.21
+
+
+networks:
+  private:
+    ipam:
+      config:
+        - subnet: 172.24.0.0/16

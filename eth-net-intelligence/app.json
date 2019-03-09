@@ -1,0 +1,68 @@
+[
+  {
+    "name"              : "eth-sealer",
+    "script"            : "app.js",
+    "log_date_format"   : "YYYY-MM-DD HH:mm Z",
+    "merge_logs"        : false,
+    "watch"             : false,
+    "max_restarts"      : 10,
+    "exec_interpreter"  : "node",
+    "exec_mode"         : "fork_mode",
+    "env":
+    {
+      "NODE_ENV"        : "production",
+      "RPC_HOST"        : "172.24.0.4",
+      "RPC_PORT"        : "8545",
+      "LISTENING_PORT"  : "30303",
+      "INSTANCE_NAME"   : "ETH-SEALER",
+      "CONTACT_DETAILS" : "",
+      "WS_SERVER"       : "ws://172.24.0.21:3000",
+      "WS_SECRET"       : "12345",
+      "VERBOSITY"       : 2
+    }
+  },
+  {
+    "name"              : "eth-node1",
+    "script"            : "app.js",
+    "log_date_format"   : "YYYY-MM-DD HH:mm Z",
+    "merge_logs"        : false,
+    "watch"             : false,
+    "max_restarts"      : 10,
+    "exec_interpreter"  : "node",
+    "exec_mode"         : "fork_mode",
+    "env":
+    {
+      "NODE_ENV"        : "production",
+      "RPC_HOST"        : "172.24.0.5",
+      "RPC_PORT"        : "8545",
+      "LISTENING_PORT"  : "30303",
+      "INSTANCE_NAME"   : "ETH-NODE1",
+      "CONTACT_DETAILS" : "",
+      "WS_SERVER"       : "ws://172.24.0.21:3000",
+      "WS_SECRET"       : "12345",
+      "VERBOSITY"       : 2
+    }
+  },
+  {
+    "name"              : "eth-node2",
+    "script"            : "app.js",
+    "log_date_format"   : "YYYY-MM-DD HH:mm Z",
+    "merge_logs"        : false,
+    "watch"             : false,
+    "max_restarts"      : 10,
+    "exec_interpreter"  : "node",
+    "exec_mode"         : "fork_mode",
+    "env":
+    {
+      "NODE_ENV"        : "production",
+      "RPC_HOST"        : "172.24.0.6",
+      "RPC_PORT"        : "8545",
+      "LISTENING_PORT"  : "30303",
+      "INSTANCE_NAME"   : "ETH-NODE2",
+      "CONTACT_DETAILS" : "",
+      "WS_SERVER"       : "ws://172.24.0.21:3000",
+      "WS_SECRET"       : "12345",
+      "VERBOSITY"       : 2
+    }
+  }
+]
