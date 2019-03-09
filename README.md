@@ -40,5 +40,5 @@ docker images
 docker-compose up
 ```
 
-3) http://localhost:3000 에 접속하여 블록이 생성되고 3개의 노드가 모두 sync되는지 확인하십시오.
+3) localhost:3000에 접속하여 블록이 생성되고 3개의 노드가 모두 sync되는지 확인하십시오.
 
