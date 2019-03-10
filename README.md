@@ -50,13 +50,13 @@ docker-compose up
 
 <img src="https://github.com/boyd-dev/Ethereum-Private/blob/master/stats.PNG" width="720"/>
 
-4) 노드에 접속하여 geth console을 사용하려면 다음과 같이 컨테이너에 연결할 수 있습니다.
+4) 노드 컨테이너에 접속하하려면 다음과 같이 쉘을 실행하십시오.
 
 ```
 docker exec -it eth-node1 /bin/bash
 ```
 
-geth attach로 자바스크립트 콘솔에 접속하려면 다음과 같이 할 수 있습니다(데이터 디렉토리는 /root/edu입니다).
+5) 컨테이너에 접속한 후 geth attach로 자바스크립트 콘솔에 접속하려면 다음과 같이 할 수 있습니다(데이터 디렉토리는 /root/edu입니다).
 
 ```
 root@fb7e4f887c80:~# geth attach ipc:/root/edu/geth.ipc
