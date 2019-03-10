@@ -49,3 +49,17 @@ docker-compose up
 3) localhost:3000에 접속하여 노드들이 sync되는지 확인하십시오.
 
 <img src="https://github.com/boyd-dev/Ethereum-Private/blob/master/stats.PNG" width="720"/>
+
+4) 노드에 접속하여 geth console을 사용하려면 다음과 같이 컨테이너에 연결할 수 있습니다.
+
+```
+docker exec -it eth-node1 /bin/bash
+```
+
+geth attach로 자바스크립트 콘솔에 접속하려면 다음과 같이 할 수 있습니다(데이터 디렉토리는 /root/edu입니다).
+
+```
+root@fb7e4f887c80:~# geth attach ipc:/root/edu/geth.ipc
+```
+
+ 
