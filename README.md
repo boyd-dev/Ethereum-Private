@@ -1,6 +1,6 @@
 # Ethereum Private Network with Docker
 
-Geth v1.8.23(Xircus)를 도커 컨테이너로 만들어서 이더리움 로컬 Private Blockchain을 구성하고 [Ethstats](https://ethstats.net/)처럼 노드 모니터링도 함께 적용합니다. Private에 적합하도록 PoW가 아닌 <b>PoA(Clique)</b>로 특정 노드(sealer)에서 블록을 생성합니다(생성주기는 5초).  
+Geth v1.8.23(Xircus)를 도커 컨테이너로 만들어서 이더리움 로컬 Private Blockchain을 구성하고 [Ethstats](https://ethstats.net/)처럼 노드 모니터링도 함께 적용합니다. Private에 적합하도록 PoW가 아닌 <b>PoA(Clique)</b>로 특정 노드(sealer)에서 블록을 생성합니다(생성주기 5초).  
 
 
 ### Dockerfile
@@ -11,10 +11,10 @@ Dockerfile은 각각 ubuntu-xenial 이미지로부터 만들어졌습니다.
 Geth v1.8.23 이미지입니다. genesis.json, 블록 생성계정(sealer), 블록 sign을 위해 패스워드 파일 등이 이미지 생성에 필요합니다. puppeth과 geth account를 통해 미리 준비합니다.
 
 * eth-netstats  
-Node.js로 구현된 서버입니다. 노드 모니터링 화면을 제공하는 이미지입니다. 이더리움 [위키](https://github.com/ethereum/wiki/wiki/Network-Status)와 <a href="https://medium.com/@javahippie/building-a-local-ethereum-network-with-docker-and-geth-5b9326b85f37">다음 글</a>을 참고하시기 바랍니다.
+Node.js로 구현된 서버입니다. 노드 모니터링 화면을 제공하는 이미지입니다. 이더리움 [위키](https://github.com/ethereum/wiki/wiki/Network-Status)와 <a href="https://medium.com/@javahippie/building-a-local-ethereum-network-with-docker-and-geth-5b9326b85f37">다음 글</a>을 참고하시기 바랍니다.😁
 
 * eth-net-intelligence  
-등록된 노드에 접속하여 정보를 수집하여 eth-netstats에 웹소켓을 통해 전달하는 서버 이미지입니다. 역시 <a href="https://medium.com/@javahippie/building-a-local-ethereum-network-with-docker-and-geth-5b9326b85f37">다음 글</a>을 참고하시기 바랍니다.
+등록된 노드(app.json에 설정)에 접속하여 정보를 수집하여 eth-netstats에 웹소켓을 통해 전달하는 서버 이미지입니다. 역시 <a href="https://medium.com/@javahippie/building-a-local-ethereum-network-with-docker-and-geth-5b9326b85f37">다음 글</a>을 참고하시기 바랍니다.
 
 ### docker-compose.yml
 
