@@ -14,11 +14,11 @@ Geth v1.8.23 이미지입니다. genesis.json, 블록 생성계정(sealer), 블�
 Node.js로 구현된 서버입니다. 노드 모니터링 화면을 제공하는 이미지입니다. 이더리움 [위키](https://github.com/ethereum/wiki/wiki/Network-Status)와 <a href="https://medium.com/@javahippie/building-a-local-ethereum-network-with-docker-and-geth-5b9326b85f37">다음 글</a>을 참고하시기 바랍니다.😁
 
 * eth-net-intelligence  
-등록된 노드(app.json에 설정)에 접속하여 정보를 수집하여 eth-netstats에 웹소켓을 통해 전달하는 서버 이미지입니다. 역시 <a href="https://medium.com/@javahippie/building-a-local-ethereum-network-with-docker-and-geth-5b9326b85f37">다음 글</a>을 참고하시기 바랍니다.
+등록된 노드(app.json에 설정)에 접속하여 정보를 수집하고 웹소켓을 통해 eth-netstats으로 전달하는 서버 이미지입니다. 역시 <a href="https://medium.com/@javahippie/building-a-local-ethereum-network-with-docker-and-geth-5b9326b85f37">다음 글</a>을 참고하시기 바랍니다.
 
 ### docker-compose.yml
 
-docker-compose를 통해 부트노드, Sealer노드(1개), 일반노드(2개), 모니터링 노드, 화면 노드를 모두 실행합니다. Dockerfile을 통해 만들어진 컨테이너를 순차적으로 실행합니다.
+docker-compose를 통해 부트노드, Sealer노드(1개), 일반노드(2개), 모니터링 서버, 화면 서버를 모두 실행합니다. Dockerfile을 통해 만들어진 이미지를 컨테이너에 담아 순차적으로 실행합니다.
 
 ### 사용법
 
