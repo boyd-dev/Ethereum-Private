@@ -56,7 +56,7 @@ docker-compose up
 docker exec -it eth-node1 /bin/bash
 ```
 
-5) 컨테이너에 접속한 후 geth attach로 자바스크립트 콘솔에 사용하려면 다음과 같이 할 수 있습니다(데이터 디렉토리는 /root/edu입니다).
+5) 컨테이너에 접속한 후 geth attach로 자바스크립트 콘솔을 사용하려면 다음과 같이 할 수 있습니다(데이터 디렉토리는 /root/edu입니다).
 
 ```
 root@fb7e4f887c80:~# geth attach ipc:/root/edu/geth.ipc
